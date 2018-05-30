@@ -1,6 +1,11 @@
 # Spaceship Shooter RPG Deluxe
 "Spaceship Shooter RPG Deluxe" es la continuación de el juego "[Ultra Spaceships](https://furygames.itch.io/ultra-space-ships)" mejorado y con elementos RPG, para Android
 
+## Notas
+
+* Se utiliza [Godot Engine en la rama 2.1](https://github.com/godotengine/godot/tree/2.1)
+* Cuando salga Godot Engine 3.1 Estable se migrará a esa rama por el GLES2 y las nuevas características.
+
 ## Créditos
 
 ### Matías Muñoz Espinoza
