@@ -1,19 +1,25 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://Game/MainScreens/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/MainBackground/MainBackground.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Game/Buttons/MenuButton/button_normal.png" type="Texture" id=3]
-[ext_resource path="res://Game/Buttons/MenuButton/button_pressed.png" type="Texture" id=4]
-[ext_resource path="res://Game/Buttons/MenuButton/button_hover.png" type="Texture" id=5]
-[ext_resource path="res://Game/Buttons/MenuButton/button_disabled.png" type="Texture" id=6]
-[ext_resource path="res://Game/Fonts/Nokia/nokia.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Game/Fonts/Nokia/nokia.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Game/Buttons/Play/PlayNormal.png" type="Texture" id=4]
+[ext_resource path="res://Game/Buttons/Play/PlayPressed.png" type="Texture" id=5]
+[ext_resource path="res://Game/Buttons/Config/ConfigNormal.png" type="Texture" id=6]
+[ext_resource path="res://Game/Buttons/Config/ConfigPressed.png" type="Texture" id=7]
+[ext_resource path="res://Game/Buttons/Info/InfoNormal.png" type="Texture" id=8]
+[ext_resource path="res://Game/Buttons/Info/InfoPressed.png" type="Texture" id=9]
+[ext_resource path="res://Game/Buttons/Shop/ShopNormal.png" type="Texture" id=10]
+[ext_resource path="res://Game/Buttons/Shop/ShopPressed.png" type="Texture" id=11]
+[ext_resource path="res://Game/Buttons/Privacy/PrivacyNormal.png" type="Texture" id=12]
+[ext_resource path="res://Game/Buttons/Privacy/PrivacyPressed.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 
-font/size = 28
+font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 7 )
+font/font = ExtResource( 3 )
 
 [node name="Menu" type="Node"]
 
@@ -21,180 +27,234 @@ script/script = ExtResource( 1 )
 
 [node name="MainBackground" parent="." instance=ExtResource( 2 )]
 
-[node name="VBox" type="VBoxContainer" parent="."]
+[node name="Title" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Spaceship" type="Label" parent="Title"]
+
+rect/rotation = 2.44284
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 97.0
+margin/top = 56.0
+margin/right = 342.0
+margin/bottom = 106.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.138497, 0.992188, 0.131775, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "SPACESHIP"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Shooter" type="Label" parent="Title"]
+
+rect/rotation = 11.6143
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 12.0
+margin/top = 122.0
+margin/right = 232.0
+margin/bottom = 172.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.992188, 0.131775, 0.131775, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "SHOOTER"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="RPG" type="Label" parent="Title"]
+
+rect/rotation = -14.2616
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 287.0
+margin/top = 88.0
+margin/right = 377.0
+margin/bottom = 138.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.202667, 0.829669, 0.894531, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "RPG"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Deluxe" type="Label" parent="Title"]
+
+rect/rotation = 0.165104
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 147.0
+margin/top = 132.0
+margin/right = 327.0
+margin/bottom = 182.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.902344, 0.891219, 0.190338, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "DELUXE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Display" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="Background" type="ColorFrame" parent="Display"]
+
+visibility/self_opacity = 0.8
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 440.0
+margin/right = 400.0
+margin/bottom = 570.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Play" type="TextureButton" parent="."]
 
 anchor/left = 3
 anchor/top = 3
 anchor/right = 3
 anchor/bottom = 3
 focus/ignore_mouse = false
-focus/stop_mouse = false
+focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 93.0
-margin/top = 141.0
-margin/right = -97.0
-margin/bottom = -67.0
-alignment = 0
+margin/left = 102.0
+margin/top = 105.0
+margin/right = -108.0
+margin/bottom = -105.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+textures/pressed = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.7, 0.7 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Modes" type="TextureButton" parent="VBox"]
+[node name="Options" type="TextureButton" parent="."]
 
-editor/display_folded = true
+rect/scale = Vector2( 0.6, 0.6 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 190.0
-margin/bottom = 49.0
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 110.0
+margin/bottom = 110.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-textures/hover = ExtResource( 5 )
-textures/disabled = ExtResource( 6 )
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
 params/resize_mode = 0
 params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Label" type="Label" parent="VBox/Modes"]
+[node name="Credits" type="TextureButton" parent="."]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 189.0
-margin/bottom = 47.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Modos"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Others" type="TextureButton" parent="VBox"]
-
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 53.0
-margin/right = 190.0
-margin/bottom = 102.0
+margin/left = 340.0
+margin/top = 580.0
+margin/right = 390.0
+margin/bottom = 630.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-textures/hover = ExtResource( 5 )
-textures/disabled = ExtResource( 6 )
+textures/normal = ExtResource( 8 )
+textures/pressed = ExtResource( 9 )
 params/resize_mode = 0
+params/scale = Vector2( 0.5, 0.5 )
 params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Label" type="Label" parent="VBox/Others"]
+[node name="Shop" type="TextureButton" parent="."]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 189.0
-margin/bottom = 47.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Otros"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Credits" type="TextureButton" parent="VBox"]
-
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 106.0
-margin/right = 190.0
-margin/bottom = 155.0
+margin/left = 10.0
+margin/top = 580.0
+margin/right = 60.0
+margin/bottom = 630.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-textures/hover = ExtResource( 5 )
-textures/disabled = ExtResource( 6 )
+textures/normal = ExtResource( 10 )
+textures/pressed = ExtResource( 11 )
 params/resize_mode = 0
+params/scale = Vector2( 0.5, 0.5 )
 params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Label" type="Label" parent="VBox/Credits"]
+[node name="Privacy" type="TextureButton" parent="."]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 189.0
-margin/bottom = 47.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Créditos"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Options" type="TextureButton" parent="VBox"]
-
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 159.0
-margin/right = 190.0
-margin/bottom = 208.0
+margin/left = 340.0
+margin/top = 10.0
+margin/right = 390.0
+margin/bottom = 60.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-textures/hover = ExtResource( 5 )
-textures/disabled = ExtResource( 6 )
+textures/normal = ExtResource( 12 )
+textures/pressed = ExtResource( 13 )
 params/resize_mode = 0
+params/scale = Vector2( 0.5, 0.5 )
 params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Label" type="Label" parent="VBox/Options"]
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 189.0
-margin/bottom = 47.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Modos"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+[connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
+
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+
+[connection signal="pressed" from="Shop" to="." method="_on_Shop_pressed"]
 
 
