@@ -257,4 +257,6 @@ __meta__ = {
 
 [connection signal="pressed" from="Shop" to="." method="_on_Shop_pressed"]
 
+[connection signal="pressed" from="Privacy" to="." method="_on_Privacy_pressed"]
+
 

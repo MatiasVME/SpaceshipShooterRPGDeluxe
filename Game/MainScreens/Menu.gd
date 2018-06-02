@@ -11,3 +11,6 @@ func _on_Credits_pressed():
 
 func _on_Shop_pressed():
 	get_tree().change_scene("res://Game/MainScreens/Shop.tscn")
+
+func _on_Privacy_pressed():
+	get_tree().change_scene("res://Game/MainScreens/Privacy.tscn")
