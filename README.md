@@ -1,3 +1,5 @@
+## Este desarrollo se continuó en gitlab en modo privado
+
 # Spaceship Shooter RPG Deluxe
 "Spaceship Shooter RPG Deluxe" es la continuación de el juego "[Ultra Spaceships](https://furygames.itch.io/ultra-space-ships)" mejorado y con elementos RPG, para Android
 
